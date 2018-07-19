@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="WPFAkorList.UserControls.ucMenuBar"
+              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPFAkorList.UserControls"
+             xmlns:materialMenu="clr-namespace:MaterialMenu;assembly=MaterialMenu"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300"
+              Background="#212121"
+             >
+    <UserControl.Resources>
+        <Style x:Key="b" TargetType="materialMenu:MenuButton">
+            <Setter Property="HoverBackground" Value="#33691e"></Setter>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid>
+        <materialMenu:SideMenu HorizontalAlignment="Left" x:Name="CustomMenu"
+                               MenuWidth="170"
+                               State="Visible"
+                               Theme="None"
+                               ButtonBackground="#212121"
+                               ButtonHover="#33691e"
+                               >
+            <materialMenu:SideMenu.Menu>
+                <ScrollViewer VerticalScrollBarVisibility="Hidden">
+                    <StackPanel Orientation="Vertical">
+                        <materialMenu:MenuButton Text="Administration" ></materialMenu:MenuButton>
+                        <materialMenu:MenuButton Text="Packing"></materialMenu:MenuButton>
+                        <materialMenu:MenuButton Text="Logistics"></materialMenu:MenuButton>
+                        <materialMenu:MenuButton Text="Org"></materialMenu:MenuButton>
+                        <materialMenu:MenuButton Text="SaveChanges"></materialMenu:MenuButton>
+                        <materialMenu:MenuButton Text="Help"></materialMenu:MenuButton>
+                        <materialMenu:MenuButton Text="Close Menu"></materialMenu:MenuButton>
+                    </StackPanel>
+                </ScrollViewer>
+            </materialMenu:SideMenu.Menu>
+        </materialMenu:SideMenu>
+    </Grid>
+</UserControl>
